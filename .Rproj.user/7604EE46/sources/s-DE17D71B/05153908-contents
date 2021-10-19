@@ -1,0 +1,372 @@
+---
+title: "Module 1: Intro to Analytics"
+subtitle: "EME6356: Learning & Web Analytics"
+author: "Dr. Bret Staudt Willet"
+date: "August 24, 2021"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    seal: true
+    css: [default, 'custom.css', 'custom-fonts.css']
+    nature:
+      titleSlideClass: [left, bottom]
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+usethis::use_git_ignore(c("*.csv", "*.rds"))
+options(htmltools.dir.version = FALSE)
+
+library(knitr)
+library(tidyverse)
+library(xaringan)
+library(fontawesome)
+```
+
+class: inverse, center, middle
+
+**View the slides:** 
+
+[bretsw.github.io/eme6356-module1](https://bretsw.github.io/eme6356-module1)
+
+---
+
+class: inverse, center, middle
+
+# Welcome to EME6356!
+
+---
+
+# Say hi!
+
+```{r, out.width = "840px", echo = FALSE, fig.align = "center"}
+include_graphics("img/mask.jpg")
+```
+
+---
+
+class: inverse, center, middle
+
+# What is "analytics"?
+
+---
+
+class: inverse, center, middle
+
+# What is "analytics"?
+
+**The first thing that comes to mind when I think about learning analytics is...**
+
+<div class="padlet-embed" style="border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;width:100%;background:#F4F4F4"><p style="padding:0;margin:0"><iframe src="https://fsu.padlet.org/embed/76eouyx89d2esz1r" frameborder="0" allow="camera;microphone;geolocation" style="width:100%;height:420px;display:block;padding:0;margin:0"></iframe></p><div style="padding:8px;text-align:right;margin:0;"><a href="https://padlet.com?ref=embed" style="padding:0;margin:0;border:none;display:block;line-height:1;height:16px" target="_blank"><img src="https://padlet.net/embeds/made_with_padlet.png" width="86" height="16" style="padding:0;margin:0;background:none;border:none;display:inline;box-shadow:none" alt="Made with Padlet"></a></div></div>
+
+---
+
+class: inverse, center, middle
+
+# A sink full of dishes...
+
+---
+
+# Great British Bake Off
+
+```{r, out.width = "840px", echo = FALSE, fig.align = "center"}
+include_graphics("img/baking.jpg")
+```
+
+---
+
+# Choices of ingredients
+
+```{r, out.width = "840px", echo = FALSE, fig.align = "center"}
+include_graphics("img/ingredients.jpg")
+```
+
+---
+
+# A sink full of dishes...
+
+```{r, out.width = "840px", echo = FALSE, fig.align = "center"}
+include_graphics("img/sink.jpg")
+```
+
+---
+
+class: inverse, center, middle
+
+# A sink full of dishes...
+
+**What analytics stories can a sink tell?**
+
+<div class="padlet-embed" style="border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;width:100%;background:#F4F4F4"><p style="padding:0;margin:0"><iframe src="https://fsu.padlet.org/embed/2nujhz09bjxqfqkb" frameborder="0" allow="camera;microphone;geolocation" style="width:100%;height:420px;display:block;padding:0;margin:0"></iframe></p><div style="padding:8px;text-align:right;margin:0;"><a href="https://padlet.com?ref=embed" style="padding:0;margin:0;border:none;display:block;line-height:1;height:16px" target="_blank"><img src="https://padlet.net/embeds/made_with_padlet.png" width="86" height="16" style="padding:0;margin:0;background:none;border:none;display:inline;box-shadow:none" alt="Made with Padlet"></a></div></div>
+
+---
+
+class: inverse, center, middle
+
+# Defining "learning analytics"
+
+---
+
+# Defining *learning analytics*
+
+--
+
+- Measurement
+
+--
+
+- Collection
+
+--
+
+- Analysis
+
+--
+
+- Reporting
+
+--
+
+...of data about learners and their contexts, 
+
+--
+
+for purposes of understanding and optimising learning and the environments in which it occurs.
+
+--
+
+<div class="caption">
+<p><a href="https://www.solaresearch.org/about/what-is-learning-analytics/" target="_blank">Society for Learning Analytics Research (SoLAR)</a></p>
+</div>
+
+---
+
+# Defining *learning analytics*
+
+--
+
+Convergence of:
+
+--
+
+- **Learning**
+
+--
+
+  - e.g. educational research, learning and assessment sciences, educational technology
+
+--
+
+- **Analytics**
+
+--
+
+  - e.g. statistics, visualization, computer/data sciences, artificial intelligence
+
+--
+
+- **Human-Centered Design**
+
+--
+
+  - e.g. usability, participatory design, sociotechnical systems thinking
+
+--
+
+<div class="caption">
+<p><a href="https://www.solaresearch.org/about/what-is-learning-analytics/" target="_blank">Society for Learning Analytics Research (SoLAR)</a></p>
+</div>
+
+---
+
+# Defining *learning analytics*
+
+```{r, out.width = "720px", echo = FALSE, fig.align = "center"}
+include_graphics("img/learning-analytics.png")
+```
+
+<div class="caption">
+Society for Learning Analytics Research. (2019, August 27). Learning analytics in a nutshell [Video]. https://youtu.be/XscUZ8dIa-8 
+</div>
+
+---
+
+class: inverse, center, middle
+
+# Quick examples of analytics
+
+---
+
+# LMS logins
+
+```{r, out.width = "720px", echo = FALSE, fig.align = "center"}
+include_graphics("img/lms-logins.png")
+```
+
+---
+
+# Class conversation patterns
+
+```{r, out.width = "560px", echo = FALSE, fig.align = "center"}
+include_graphics("img/class-network.png")
+```
+
+---
+
+# Twitter \#Edchat topics
+
+```{r, out.width = "720px", echo = FALSE, fig.align = "center"}
+include_graphics("img/twitter-topics.png")
+```
+
+---
+
+class: inverse, center, middle
+
+# What is "analytics" *not*?
+
+---
+
+# Analytics is not...
+
+```{r, out.width = "600px", echo = FALSE, fig.align = "center"}
+include_graphics("img/magic.jpg")
+```
+
+--
+
+- a substitute teacher
+
+--
+
+- a test proctor
+
+--
+
+- oil
+
+---
+
+class: inverse, center, middle
+
+# What do *you* want to do with analytics?
+
+<div class="padlet-embed" style="border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;width:100%;background:#F4F4F4"><p style="padding:0;margin:0"><iframe src="https://fsu.padlet.org/embed/xqug6vu51yfxwrc5" frameborder="0" allow="camera;microphone;geolocation" style="width:100%;height:420px;display:block;padding:0;margin:0"></iframe></p><div style="padding:8px;text-align:right;margin:0;"><a href="https://padlet.com?ref=embed" style="padding:0;margin:0;border:none;display:block;line-height:1;height:16px" target="_blank"><img src="https://padlet.net/embeds/made_with_padlet.png" width="86" height="16" style="padding:0;margin:0;background:none;border:none;display:inline;box-shadow:none" alt="Made with Padlet"></a></div></div>
+
+---
+
+class: inverse, center, middle
+
+# Looking ahead
+
+---
+
+# Semester schedule
+
+--
+
+- Module 1: Intro to Analytics
+
+--
+
+- Module 2: Solving Problems (focus on Personal and Corporate)
+
+--
+
+- Module 3: Analytics Tools (focus on K-12 and Higher Ed)
+
+--
+
+- Module 4: Social Media Analytics
+
+--
+
+- Module 5: Data Visualization
+
+--
+
+- Module 6: Educational Data Mining and Learning Analytics
+
+--
+
+- Module 7: Challenges in Learning Analytics
+
+--
+
+- Module 8: Case Discussions
+
+--
+
+- Module 9: Future of Analytics
+
+---
+
+# Module structure
+
+```{r, out.width = "480px", echo = FALSE, fig.align = "center"}
+include_graphics("img/workshop.jpg")
+```
+
+--
+
+- `r fa("video", fill = "#782F40")` Meet (Tuesdays at 8pm on Zoom)
+
+--
+
+- `r fa("compass", fill = "#782F40")` Explore
+
+--
+
+- `r fa("book-open", fill = "#782F40")` Read
+
+--
+
+- `r fa("comments", fill = "#782F40")` Discuss (Flipgrid)
+
+--
+
+- `r fa("user-edit", fill = "#782F40")` Create
+
+---
+
+# Major Assignments
+
+```{r, out.width = "480px", echo = FALSE, fig.align = "center"}
+include_graphics("img/build.jpg")
+```
+
+--
+
+- Flipgrid discussions (8 x 25 points)
+
+--
+
+- Case discussions (200 points)
+
+--
+
+- Analytics Practice Activities (3 x 150 points)
+
+--
+
+- Analytics Problem Plan (150 points)
+
+---
+
+class: inverse, center, middle
+
+# Questions?
+
+```{r, out.width = "480px", echo = FALSE, fig.align = "center"}
+include_graphics("img/question.jpg")
+```
+
+**What questions can I answer for you now?**
+
+**How can I support you this week?**
+
+<hr>
+
+`r fa("envelope", fill = "white")` [bret.staudtwillet@fsu.edu](mailto:bret.staudtwillet@fsu.edu) | `r fa("twitter", fill = "white")` [@bretsw](https://twitter.com/bretsw) | `r fa("globe", fill = "white")` [bretsw.com](http://bretsw.com)
